@@ -56,9 +56,41 @@
   display: block;
 }
 
+#submit-btn {
+  background-color: purple;
+  color: white;
+  font-size: 1.25em;
+  border-radius: 10px;
+  width: 6em;
+  height: 2em;
+  margin-top: .5em;
+  margin-left: 1em;
+}
+
 p {
   font-size: 1.5em;
 }
+
+input {
+  width: 50%;
+  height: 3em;
+  margin-left: 2em;
+  margin-top: 1em;
+}
+
+#right-wrong {
+  padding-top: 1em;
+}
+
+#complete {
+  text-align: left;
+}
+
+#initials {
+  display: flex;
+}
+
+
 
 /* .App-header {
   background-color: #282c34;

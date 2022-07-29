@@ -1,5 +1,6 @@
 import React from 'react';
 import Question from './Question';
+import QuizComplete from './QuizComplete';
 import StartQuiz from './StartQuiz';
 
 function Quiz() {
@@ -11,7 +12,8 @@ function Quiz() {
       </div>
       <div id="quizcontainer">
         {/* <StartQuiz /> */}
-        <Question />
+        {/* <Question /> */}
+        <QuizComplete />
       </div>
     </div>
   )

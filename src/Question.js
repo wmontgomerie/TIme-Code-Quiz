@@ -1,4 +1,5 @@
 import React from 'react';
+import RightOrWrong from './RightOrWrong';
 
 function Question() {
   return (
@@ -13,6 +14,7 @@ function Question() {
         <button type="button" className='question-btn'>3. parenthesis</button>
         <button type="button" className='question-btn'>4. square brackets</button>
       </div>  
+      <RightOrWrong />
     </div>
   )
 };
