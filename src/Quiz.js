@@ -10,8 +10,8 @@ function Quiz() {
         <h3>Time: 75</h3>
       </div>
       <div id="quizcontainer">
-        <StartQuiz />
-        {/* <Question /> */}
+        {/* <StartQuiz /> */}
+        <Question />
       </div>
     </div>
   )

@@ -9,7 +9,7 @@ function StartQuiz() {
         within the time limit. Keep in mind that incorrect answers
         will penalize your score/time by ten seconds!
       </p>
-      <button type="button">Start Quiz</button>
+      <button type="button" id="startbutton">Start Quiz</button>
     </div>
   )
 };
