@@ -1,23 +1,37 @@
 .App {
   text-align: center;
-  background-color: blue;
+  background-color: white;
+  padding-top: 2em ;
   height: 100vh;
 }
 
 #timequiz {
-  background-color: aqua;
+  background-color: white;
   border-style: solid;
+  border-radius: 15px;
   margin: 3em 5em;
-  padding: 3em 5em;
+  padding: .25em 2em;
   height: 50em;
 }
 
 #question {
   background-color: white;
   border-style: solid;
+  border-radius: 25px;
   height: 30em;
-  padding: 3em;
+  padding: 2em;
+  margin: 2em 0em;
   
+}
+#scoretime {
+  display: flex;
+  justify-content: space-between;
+}
+#scores{
+  padding-top: 1.5em;
+}
+#quizcontainer{
+  padding: 5em 
 }
 
 
