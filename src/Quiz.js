@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import HighScores from './HighScores';
 import Question from './Question';
 import QuizComplete from './QuizComplete';
 import StartQuiz from './StartQuiz';
 
 function Quiz() {
+
+  const [isClicked, setIsClicked] = useState(false);
+  // const [questionClicked, setQuestionClicked] = useState(false);
+
   return (
     <div id="timequiz">
       <div id="scoretime">
@@ -12,10 +16,15 @@ function Quiz() {
         <h3>Time: 75</h3>
       </div>
       <div id="quizcontainer">
-        {/* <StartQuiz /> */}
-        {/* <Question /> */}
+        {isClicked === false && (
+         <StartQuiz setIsClicked={setIsClicked}/>
+        )}
+        {isClicked === true && (
+           <Question />
+        )}
+       
         {/* <QuizComplete /> */}
-        <HighScores />
+        {/* <HighScores /> */}
       </div>
     </div>
   )
