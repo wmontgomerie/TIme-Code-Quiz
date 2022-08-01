@@ -90,6 +90,22 @@ input {
   display: flex;
 }
 
+#scores {
+  text-align: left;
+
+}
+
+#high {
+  background-color: lightgrey;
+  height: 3em;
+  margin-bottom: 1em;
+}
+
+#score {
+  padding: .75em;
+ 
+}
+
 
 
 /* .App-header {
