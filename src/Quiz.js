@@ -7,7 +7,8 @@ import StartQuiz from './StartQuiz';
 function Quiz() {
 
   const [isClicked, setIsClicked] = useState(false);
-  // const [questionClicked, setQuestionClicked] = useState(false);
+  const [rightOrWrong, setRightOrWrong] = useState(false);
+  const [questionClicked, setQuestionClicked] = useState(false);
 
   return (
     <div id="timequiz">
@@ -17,10 +18,13 @@ function Quiz() {
       </div>
       <div id="quizcontainer">
         {isClicked === false && (
-         <StartQuiz setIsClicked={setIsClicked}/>
+          <StartQuiz setIsClicked={setIsClicked}/>
         )}
         {isClicked === true && (
-           <Question />
+          <Question 
+            setRightOrWrong={setRightOrWrong}  
+            setQuestionClicked={setQuestionClicked} 
+          />
         )}
        
         {/* <QuizComplete /> */}
