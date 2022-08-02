@@ -14,6 +14,7 @@ function Quiz() {
   const [answerFour, setAnswerFour] = useState(" ");
   const [questionAnswered, setQuestionAnswered] = useState(0);
   const [finalSubmit, setFinalSubmit] = useState(false);
+  const [correct, setCorrect] = useState(" ");
 
   return (
     <div id="timequiz">
@@ -34,6 +35,7 @@ function Quiz() {
             answerTwo="booleans"
             answerThree="alerts"
             answerFour="numbers"
+            correct="alerts"
           />
         )}
         {questionAnswered === 1 && (
@@ -45,6 +47,7 @@ function Quiz() {
             answerTwo="curly brackets"
             answerThree="parenthesis"
             answerFour="square brackets"
+            correct="parenthesis"
           />  
         )}
         {questionAnswered === 2 && (
@@ -56,6 +59,7 @@ function Quiz() {
             answerTwo="other arrays"
             answerThree="booleans"
             answerFour="all of the above"
+            correct="all of the above"
           />  
         )}
         {questionAnswered === 3 && (
@@ -67,6 +71,7 @@ function Quiz() {
             answerTwo="curly brackets"
             answerThree="quotes"
             answerFour="parenthesis"
+            correct="quotes"
           />  
         )}
         {questionAnswered === 4 && (
@@ -77,7 +82,8 @@ function Quiz() {
             answerOne="Javascript"
             answerTwo="terminal/bash"
             answerThree="four loops"
-            answerFour="consol.log"
+            answerFour="console.log"
+            correct="console.log"
           />  
         )}
         {questionAnswered === 5 && finalSubmit === false && (

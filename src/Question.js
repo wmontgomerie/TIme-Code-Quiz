@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import RightOrWrong from './RightOrWrong';
 
-function Question({questionAnswered, setQuestionAnswered, question, answerOne, answerTwo, answerThree, answerFour}) {
+function Question({questionAnswered, setQuestionAnswered, question, answerOne, answerTwo, answerThree, answerFour, correct}) {
 
-  const questionClickHandler = () => {
+  const [rightOrWrong, setRightOrWrong] = useState(" ");
+  
+  const questionClickHandler = (e) => {
     setQuestionAnswered(questionAnswered + 1);
+    console.log(e.target.value);
   };
   
   return (
@@ -16,7 +19,7 @@ function Question({questionAnswered, setQuestionAnswered, question, answerOne, a
         <button 
           type="button" 
           className='question-btn'
-          onClick={questionClickHandler}
+          onClick={(e) => questionClickHandler()}
         >
           1. {answerOne}
         </button>
