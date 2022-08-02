@@ -1,19 +1,16 @@
 import React from 'react';
 import RightOrWrong from './RightOrWrong';
 
-function Question({setRightOrWrong, setQuestionClicked}) {
+function Question({questionAnswered, setQuestionAnswered, question, answerOne, answerTwo, answerThree, answerFour}) {
 
   const questionClickHandler = () => {
-    alert("this question button works!");
+    setQuestionAnswered(questionAnswered + 1);
   };
-
-
-
+  
   return (
     <div id="question">
       <h1>
-        The condition in an if/else statement is inclosed with 
-        _________.
+        {question}
       </h1>
       <div id="btn-group">
         <button 
@@ -21,28 +18,28 @@ function Question({setRightOrWrong, setQuestionClicked}) {
           className='question-btn'
           onClick={questionClickHandler}
         >
-          1. queries
+          1. {answerOne}
         </button>
         <button 
           type="button" 
           className='question-btn'
           onClick={questionClickHandler}
         >
-          2. curly brackets
+          2. {answerTwo}
         </button>
         <button
           type="button"
           className='question-btn'
           onClick={questionClickHandler}
         >
-          3. parenthesis
+          3. {answerThree}
         </button>
         <button 
           type="button" 
           className='question-btn'
           onClick={questionClickHandler}
         >
-          4. square brackets
+          4. {answerFour}
         </button>
       </div>  
       <RightOrWrong />
