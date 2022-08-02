@@ -13,6 +13,7 @@ function Quiz() {
   const [answerThree, setAnswerThree] = useState(" ");
   const [answerFour, setAnswerFour] = useState(" ");
   const [questionAnswered, setQuestionAnswered] = useState(0);
+  const [finalSubmit, setFinalSubmit] = useState(false);
 
   return (
     <div id="timequiz">
@@ -46,8 +47,45 @@ function Quiz() {
             answerFour="square brackets"
           />  
         )}
-        {/* <QuizComplete /> */}
-        {/* <HighScores /> */}
+        {questionAnswered === 2 && (
+          <Question 
+            questionAnswered={questionAnswered}
+            setQuestionAnswered={setQuestionAnswered}
+            question="Arrays in javascript can be used to store ____________."
+            answerOne="numbers and strings"
+            answerTwo="other arrays"
+            answerThree="booleans"
+            answerFour="all of the above"
+          />  
+        )}
+        {questionAnswered === 3 && (
+          <Question 
+            questionAnswered={questionAnswered}
+            setQuestionAnswered={setQuestionAnswered}
+            question="String values must be enclosed within ____________ when being assigned to variables."
+            answerOne="commas"
+            answerTwo="curly brackets"
+            answerThree="quotes"
+            answerFour="parenthesis"
+          />  
+        )}
+        {questionAnswered === 4 && (
+          <Question 
+            questionAnswered={questionAnswered}
+            setQuestionAnswered={setQuestionAnswered}
+            question="A very useful tool used during development and debugging for printing content to the debugger is:"
+            answerOne="Javascript"
+            answerTwo="terminal/bash"
+            answerThree="four loops"
+            answerFour="consol.log"
+          />  
+        )}
+        {questionAnswered === 5 && finalSubmit === false && (
+          <QuizComplete setFinalSubmit={setFinalSubmit} />
+        )}
+        {finalSubmit === true && questionAnswered === 5 && (
+          <HighScores setIsClicked={setIsClicked} setQuestionAnswered={setQuestionAnswered} setFinalSubmit={setFinalSubmit} />
+        )}   
       </div>
     </div>
   )

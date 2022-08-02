@@ -1,7 +1,12 @@
 import React from 'react';
 import RightOrWrong from './RightOrWrong';
 
-function QuizComplete() {
+function QuizComplete({setFinalSubmit}) {
+
+  const submitHandler = () => {
+    setFinalSubmit(true);
+  }
+
   return (
     <div id="complete">
       <h1>All done!</h1>
@@ -9,7 +14,7 @@ function QuizComplete() {
       <div id="initials">
         <h3>Enter initials: </h3>
         <input type="text"/>
-        <button type="button" id="submit-btn">Submit</button>
+        <button type="button" id="submit-btn" onClick={submitHandler}>Submit</button>
       </div>
       <RightOrWrong />
     </div>
